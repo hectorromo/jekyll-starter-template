@@ -1,0 +1,151 @@
+/* Comments
+=========================================== */
+
+/*
+*/
+
+
+
+/* Variables
+=========================================== */
+
+
+
+
+/* Component
+=========================================== */
+
+.Article {
+	position: relative;
+}
+
+
+
+/* Elements
+=========================================== */
+
+.Article {
+	h1 {}
+	h2 {}
+}
+
+
+
+/* Part
+=========================================== */
+
+.Article {
+	&-thumb {
+		& + .Article-content {
+			margin-top: 15px;
+		}
+	}
+    
+    &-background {
+        .BackgroundCover();
+        display: block;
+        height: 400px;
+        .Article-content {
+            display: inline-block;
+            padding: 40px;
+            width: 100%;
+            
+//            background: -moz-linear-gradient(top,  rgba(0,0,0,0) 26%, rgba(0,0,0,0.38) 69%, rgba(0,0,0,0.45) 100%);
+//            background: -webkit-gradient(linear, left top, left bottom, color-stop(26%,rgba(0,0,0,0)), color-stop(69%,rgba(0,0,0,0.38)), color-stop(100%,rgba(0,0,0,0.45)));
+//            background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 26%,rgba(0,0,0,0.38) 69%,rgba(0,0,0,0.45) 100%);
+//            background: -o-linear-gradient(top,  rgba(0,0,0,0) 26%,rgba(0,0,0,0.38) 69%,rgba(0,0,0,0.45) 100%);
+//            background: -ms-linear-gradient(top,  rgba(0,0,0,0) 26%,rgba(0,0,0,0.38) 69%,rgba(0,0,0,0.45) 100%);
+//            background: linear-gradient(to bottom,  rgba(0,0,0,0) 26%,rgba(0,0,0,0.38) 69%,rgba(0,0,0,0.45) 100%);
+            
+            h1, p { 
+                color: @ColorAlabaster;
+            }
+        }
+    }
+}
+
+
+
+/* Modifier
+=========================================== */
+
+.Article {
+	&--small {}
+}
+
+
+
+/* Context
+=========================================== */
+
+.Article {
+	&.with-Teaser {
+		h1 {
+			.Type-h3;
+		}
+		
+		p {
+			.Type-small;
+		}
+	}
+}
+
+.List.with-ArticleList {
+    .Article-thumb {
+        width: 30%;
+        margin-right: 5%;
+        display: inline-block;
+        vertical-align: top;
+        & + .Article-content {
+            width: 65%;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+        }
+    }
+}
+
+
+/* Pseudo and state
+=========================================== */
+
+.Article {
+    &-background {
+        &:before {
+            content: "";
+            display:inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 100%;
+            margin-left: -1px;
+        }
+        transition: 2s;
+        background-size: 120%;
+        
+        &:hover {
+            background-size: 140%;
+        }
+    }
+}
+
+
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+    .Article {
+        &-background {
+            .BackgroundCover();
+            
+            &:hover {
+                .BackgroundCover();
+            }
+        }
+    }
+
+}
+
+@media @BreakpointXnarrow {
+
+}

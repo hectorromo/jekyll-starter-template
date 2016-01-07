@@ -1,0 +1,88 @@
+/* Framework
+=========================================== */
+
+/* Widths */
+@widthContainer: 1220px;
+@WidthXwide: 2140px;
+@WidthWide: 1720px;
+@WidthRegular: 1180px;
+@WidthNarrow: 1024px; 
+@WidthXnarrow: 600px;
+
+/* Breakpoints */
+@BreakpointXwide: ~"only screen and (max-width: @{WidthXwide})";
+@BreakpointWide: ~"only screen and (max-width: @{WidthWide})";
+@BreakpointRegular: ~"only screen and (max-width: @{WidthRegular})";
+@BreakpointNarrow: ~"only screen and (max-width: @{WidthNarrow})";
+@BreakpointXnarrow: ~"only screen and (max-width: @{WidthXnarrow})";
+
+
+
+
+/* Font faces
+=========================================== */
+@font-face {
+    font-family: 'Blokk';
+    src: url('../Fonts/Blokk/BLOKKNeue-Regular.eot');
+    src: url('../Fonts/Blokk/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/Blokk/BLOKKNeue-Regular.woff') format('woff'),
+         url('../Fonts/Blokk/BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import '../Fonts/Icon.css';
+
+// @import '../Fonts/Picto.css';
+
+
+
+/* Fonts
+=========================================== */
+
+/* Base Fonts */
+@TypeSans: "futura-pt",sans-serif;
+@TypeSerif: "garamond-premier-pro-caption","times new roman", serif;
+
+
+
+/* Colors
+=========================================== */
+
+/* Framework Colors */
+@ColorBase: #f9f9f9;
+@ColorLink: #00abde;
+@ColorDefault: #414141;
+
+
+/* Ground Colors */
+@ColorBlack: #000;
+@ColorWhite: #fff;
+
+
+
+/* Brand Colors */
+@ColorAlabaster: #f7f7f7; // white
+@ColorMercury: #e6e6e6; // light gray
+@ColorDoveGray: #898989; // gray
+@ColorMineShaft: #252525; // dark gray
+@ColorColdTurkey: #C6B3B3; // smooth light purple
+@ColorPuertoRico: #56cfa6; // turqouise
+@ColorMacaroniAndCheese: #fec875; // smooth orange
+@ColorShakespeare: #56a5cf; // blue
+@ColorChestnutRose: #cf5656; // red
+@ColorOceanGreen: #42bc76; // green
+
+
+
+
+
+/* Gutters
+=========================================== */
+
+@gutterSize: 60px; // needs to be in pixels
+@gutterSizeEm: @gutterSize/16*1em;
+
+
+@BorderThinLight: 1px solid #eee;
+@BorderThinDark: 1px solid @ColorBlack;

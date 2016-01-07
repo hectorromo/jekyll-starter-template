@@ -1,0 +1,109 @@
+/* Variable
+=========================================== */
+/* Component
+=========================================== */
+
+.Modal {
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba( 0,0,0, .8 );
+    display: none;
+    font-size: 0;
+    color: @ColorAlabaster;
+}
+
+/* Element
+=========================================== */
+
+.Modal {
+    .Modal-content {
+    }
+}
+
+/* Part
+=========================================== */
+
+.Modal {
+	.Modal-overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		height: 100%;
+        
+        &:before {
+            content: " ";
+            display: inline-block;
+            width: 1px;
+            margin-left: -1px;
+            height: 100%;
+            vertical-align: middle;
+        }
+	}
+    
+    .Modal-content {
+        display: inline-block;
+        vertical-align: middle;
+        max-height: 100%;
+        overflow: auto;
+        min-width: 300px !important;
+        max-width: 600px;
+        min-height: 50px;
+    }
+
+    .Modal-close {
+        position: absolute;
+        top: 20px; right: 36px;
+        z-index: 99;
+        font-size: 60px;
+        
+        a {
+            color: @ColorAlabaster;
+        }
+    }
+}
+
+
+/* Modifier
+=========================================== */
+
+.Modal {
+    &.is-active {
+        display: block;
+    }
+}
+
+
+/* Pseudo and state
+=========================================== */
+
+/* Context
+=========================================== */
+
+/* Media queries
+=========================================== */
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+    
+}
+
+@media @BreakpointXnarrow {
+    .Modal {
+        .Modal-close {
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+}

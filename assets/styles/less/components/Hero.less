@@ -1,0 +1,156 @@
+/* Comments
+=========================================== */
+
+/*
+
+*/
+
+
+
+/* Variables
+=========================================== */
+
+
+
+
+/* Component
+=========================================== */
+
+.Hero {
+    font-size: 0;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+
+
+
+/* Elements
+=========================================== */
+
+.Hero {
+	h1 {
+		color: @ColorAlabaster;
+	}
+	p {
+        margin-bottom: 5px;
+    }
+    
+    .u-wrapper {
+        display: inline-block;
+        height: 100%;
+        margin: 0 auto;
+    }
+    
+    &-title {
+        h1 {
+            margin: 0;
+        }
+    }
+}
+
+
+
+/* Part
+=========================================== */
+
+.Hero {
+	&-title {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        box-shadow: 0 4px 5px rgba(0,0,0,.3);
+
+        .u-wrapper {
+            margin: 24px auto;
+        }
+        
+        & + div {
+            margin-top: 165px;
+        }
+    }
+    
+    &-play {
+        .transition(.4s);
+        width: 260px;
+    }
+}
+
+
+
+/* Modifier
+=========================================== */
+
+.Hero {
+	&--small {}
+}
+
+
+
+/* Pseudo and state
+=========================================== */
+
+.Hero {
+    .u-wrapper {
+        &:before {
+            content: "";
+            display:inline-block;
+            vertical-align: middle;
+            width: 1px;
+            height: 100%;
+            margin-left: -1px;
+        }
+    }
+    
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+    .Hero {
+        &-play {
+            width: 120px;
+        }
+    }
+    
+    .Hero-title {
+        height: 80px;
+        vertical-align: middle;
+        
+        .u-wrapper{
+            height: auto;
+            margin: 25px auto; 
+        } 
+        h1 {
+            font-size: 20px;
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+    
+    .Hero-title + div {
+        margin-top: 80px; 
+        margin-bottom: 0;
+    }
+}
+
+@media @BreakpointXnarrow {
+    .Hero-title {
+        height: 80px;
+        
+        .u-wrapper{
+            height: auto;
+            margin: 25px auto; 
+        } 
+        h1 {
+            font-size: 12px;
+            width: 200px;
+        }
+    }
+}

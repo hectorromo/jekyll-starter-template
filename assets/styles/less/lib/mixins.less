@@ -1,0 +1,74 @@
+/* Typography */
+
+.paragraphRegular() {
+    font: 400 16px/1.4 @TypeSerif;
+}
+    
+.paragraphSmall() {
+    font: 400 14px/1.4 @TypeSerif;
+}
+
+.Link() {
+
+}
+
+.FontSmoothing(){
+    -webkit-font-smoothing:antialiased;
+}
+
+.TextTruncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+/* Clearfix */
+
+.Clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+/* Background Image Cover */
+
+.BackgroundCover() {
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+/* Gray Filter */
+
+.GrayFilter() {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
+}
+
+
+
+/* Image Sprite */
+
+.ImageSprite(@position: 0px 0px;) {
+    background-image: url(../../Images/Sprite.png);
+    background-repeat: no-repeat;
+    background-position: @position;
+}

@@ -1,0 +1,180 @@
+/* Comments
+=========================================== */
+
+/*
+
+*/
+
+
+/* Variables
+=========================================== */
+@PanelSidebarWidth: 320px;
+@PanelTransition: 0.3s;
+
+/* Component
+=========================================== */
+
+.Panel {
+
+}
+
+/* Elements
+=========================================== */
+
+.Panel {
+	h1 {}
+	h2 {}
+    
+    a { 
+        color: @ColorWhite;
+    }
+}
+
+
+
+/* Part
+=========================================== */
+
+.Panel {
+	&-sidebar {
+		position: fixed;
+		right: -@PanelSidebarWidth; top: 0; bottom: 0;
+		width: @PanelSidebarWidth;
+		background: rgba(0,0,0,0.6);
+        color:@ColorWhite;
+		.FontSmoothing();
+		box-shadow: -2px 0 10px rgba(0,0,0,.3);
+        transition: @PanelTransition;
+        padding: 45px 0;
+        z-index: 99;
+	}
+    
+    &-top {
+        position: fixed;
+		left: 0; top: 0; right: 0;
+        padding: 20px 0;
+		color: @ColorWhite;
+		.FontSmoothing();
+        transition: @PanelTransition;
+        z-index: 99;
+    }
+    
+    &-menu-trigger {
+        position: absolute;
+		top: 28px; right: 40px;
+        font-size: 50px;
+        
+        a {
+            color: @ColorWhite;
+        }
+    }
+    
+    &-main {
+        position: relative;
+        transition: @PanelTransition;
+    }
+}
+
+
+
+/* Modifier
+=========================================== */
+
+.Panel {
+	&--small {}
+}
+
+
+
+/* Pseudo and state
+=========================================== */
+
+.Panel {
+	&:after {}
+    
+    &-menu-trigger.is-active {
+        .Icon-menu:before {
+            content: "\e070";
+        }
+    }
+    
+    &-sidebar {
+        &.is-active {
+            z-index: 99;
+            .transform(translate3d(-@PanelSidebarWidth, 0,0));
+                
+            & + div.Panel-main .Hero-title h1 {
+                font-size: 24px;
+                line-height: 60px;
+            }
+        }
+    }
+    
+    &-top {
+        &.is-active {
+            width: 'calc(100% - @PanelSidebarWidth)';
+            right: @PanelSidebarWidth;
+        }
+    }
+}
+
+
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+    .Panel {
+        &-top {
+            height: 80px;
+        }
+        &-menu-trigger {
+            position: absolute;
+            top: 22px; right: 20px;
+            font-size: 35px;
+        }
+        
+        &-sidebar {
+            padding: 18px 0;
+            &.is-active {
+                & + div.Panel-main .Hero-title h1 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media @BreakpointXnarrow {
+    .Panel {
+        &-sidebar {
+            right: -280px; top: 0; bottom: 0;
+		    width: 280px;
+            background: rgba(0,0,0,0.8);
+            
+            &.is-active {
+                z-index: 999;
+                .transform(translate3d(-280px, 0,0));
+            }
+        }
+        
+        
+        &-top {
+            height: 80px;
+            
+            &.is-active {
+                width: 100%;
+                .transform(translate3d(-280px, 0,0));
+                
+                .Logo {
+                    left: -280px;
+                }
+            }
+        }
+        &-menu-trigger {
+            position: absolute;
+            top: 22px; right: 20px;
+            font-size: 35px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/* Elements
+=========================================== */
+
+
+html,body {
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	-webkit-backface-visibility: hidden;
+	overflow: hidden;
+	width: 100%;
+	font: normal 100%/1 @TypeSans;
+}
+
+* { .box-sizing(border-box); }
+
+img { max-width: 100%; }
+
+hr {
+	margin: 10px 0 60px;
+	border-color: @ColorAlabaster;
+}
+
+a {
+	color: @ColorLink;
+	text-decoration: none;
+    outline: 0;
+    
+    &:active,
+    &:focus {
+        outline: 0;
+        border: 0;
+    }
+    
+    &:hover {
+        cursour: pointer;
+    }
+}
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+
+}
+
+@media @BreakpointXnarrow {
+
+}

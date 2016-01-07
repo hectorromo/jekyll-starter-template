@@ -1,0 +1,83 @@
+.Label {
+	
+}
+
+/* Comments
+=========================================== */
+
+/*
+
+*/
+
+
+
+/* Variables
+=========================================== */
+
+
+
+/* Component
+=========================================== */
+
+.Label {
+	.Type-small;
+	display: inline-block;
+	padding: 4px 10px;
+	background: @ColorPuertoRico;
+	color: @ColorAlabaster;
+	position: relative;
+	z-index: 2;
+	left: -2px;
+}
+
+
+
+/* Elements
+=========================================== */
+
+
+
+/* Part
+=========================================== */
+
+.Label {
+	&-part {}
+}
+
+
+
+/* Modifier
+=========================================== */
+
+.Label {
+	&--medium {
+		padding: 6px 18px;
+		.Type-regular;
+	}
+}
+
+img + .Label {
+	position: absolute;
+	top: 20px;
+}
+
+
+/* Pseudo and state
+=========================================== */
+
+.Label {
+	&:after {}
+}
+
+
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+
+}
+
+@media @BreakpointXnarrow {
+
+}

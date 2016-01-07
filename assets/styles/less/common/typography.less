@@ -1,0 +1,301 @@
+
+/* Variables
+=========================================== */
+
+
+/* Font families */
+
+//@TypeSans: helvetica, sans-serif;
+//@TypeSerif: "Adobe Garamond", "garamond", georgia, serif;
+
+
+
+
+/* Components
+=========================================== */
+
+body {
+    color: @ColorDefault;
+}
+
+h1,h2,h3,h4,h5,h6, p, blockquote {
+	display: block;
+	padding: 0;
+	margin: 0;
+	color: inherit;
+}
+
+a {
+	h1,h2,h3,h4,h5,h6,p {
+		color: inherit;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    .transition(.3s);
+    
+	a {
+		color: inherit;
+	}
+}
+
+h1, .Type-h1 {
+	font: 500 50px/1.2 @TypeSans;
+    letter-spacing: 8px;
+	margin-bottom: 25px;
+}
+
+h2, .Type-h2 {
+	font: 500 40px/1.2 @TypeSans;
+    letter-spacing: 8px;
+	margin-bottom: 20px;
+}
+
+h3, .Type-h3 {
+	font: 500 30px/1.2 @TypeSans;
+	margin-bottom: 15px;
+}
+
+h4, .Type-h4 {
+	font: 400 24px/1.3 @TypeSans;
+	margin-bottom:10px;
+}
+
+h5, .Type-h5 {
+	font: 300 20px/1.3 @TypeSans;
+	margin-bottom: 10px;
+}
+
+h6, .Type-h6 {
+	font: 300 10px/1.3 @TypeSans;
+	margin-bottom: 10px;
+}
+
+p, .Type-p {
+	font: 400 22px/1.8 @TypeSerif;
+	margin-bottom: 20px;
+	
+	&:last-child {
+		margin-bottom: 0;	
+	}
+}
+
+a, .Type-link {
+	color: ;
+}
+
+blockquote, .Type-quote {
+	.Type-large;
+	.Type-serif;
+	.Type-italic;
+	
+	margin: 40px;
+}
+
+date {
+    .Type-small;
+    .Type-sans;
+    
+    color: @ColorPuertoRico;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+
+
+.Type-preamble {
+	font: 600 26px/1.8 @TypeSerif;
+	margin-bottom: 30px;
+}
+
+.Type-xxLarge {
+	font-size: 100px;
+    font-weight: 800;
+	line-height: 1.2;
+    letter-spacing: 8px;
+	margin-bottom: 30px;
+}
+
+.Type-xLarge {
+	font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 10px;
+	line-height: 1.2;
+	margin-bottom: 40px;
+}
+
+.Type-large {
+	font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 12px;
+	line-height: 1.2;
+}
+
+.Type-regular {
+	font-size: 22px;
+}
+
+.Type-small {
+	font-size: 16px;
+}
+
+.Type-xSmall {
+	font-size: 12px;
+}
+
+.Type-sans {
+	font-family: @TypeSans;
+}
+
+.Type-serif {
+	font-family: @TypeSerif;
+}
+
+.Type-script {
+	font-family: @TypeSerif;
+    font-style: italic;
+}
+
+.Type-italic {
+	font-style: italic;
+}
+
+.Type-bold {
+	font-weight: 600;
+}
+
+.Type-uppercase {
+	text-transform: uppercase;
+}
+
+.Type--alabaster {
+    color: @ColorAlabaster;
+}
+
+.Type--mercury {
+    color: @ColorMercury;
+}
+
+.Type--doveGray {
+    color: @ColorDoveGray;
+}
+
+.Type--mineShaft {
+    color: @ColorMineShaft;
+}
+
+.Type--coldTurkey {
+    color: @ColorAlabaster;
+}
+
+.Type--puertoRico {
+    color: @ColorColdTurkey;
+}
+
+.Type--macaroniAndCheese {
+    color: @ColorMacaroniAndCheese;
+}
+
+.Type--shakespare {
+    color: @ColorShakespeare;
+}
+
+.Type--chestnutRose {
+    color: @ColorChestnutRose;
+}
+
+.Type--oceanGreen {
+    color: @ColorOceanGreen;
+}
+
+
+/* Context
+=========================================== */
+
+
+
+
+/* Media queries
+=========================================== */
+
+@media @BreakpointNarrow {
+    h1, .Type-h1 {
+        font: 500 40px/1.2 @TypeSans;
+        letter-spacing: 6px;
+        margin-bottom: 25px;
+    }
+
+    h2, .Type-h2 {
+        font: 500 30px/1.2 @TypeSans;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+    }
+
+    h3, .Type-h3 {
+        font: 500 20px/1.2 @TypeSans;
+        margin-bottom: 15px;
+    }
+
+    h4, .Type-h4 {
+        font: 400 18px/1.3 @TypeSans;
+        margin-bottom:10px;
+    }
+
+    h5, .Type-h5 {
+        font: 300 16px/1.3 @TypeSans;
+        margin-bottom: 10px;
+    }
+
+    h6, .Type-h6 {
+        font: 300 10px/1.3 @TypeSans;
+        margin-bottom: 10px;
+    }
+
+    p, .Type-p {
+        font: 400 16px/1.4 @TypeSerif;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;	
+        }
+    }
+    
+    .Type-preamble {
+        font: 600 26px/1.8 @TypeSerif;
+        margin-bottom: 30px;
+    }
+
+    .Type-xxLarge {
+        font-size: 80px;
+        letter-spacing: 6px;
+        margin-bottom: 30px;
+    }
+
+    .Type-xLarge {
+        font-size: 50px;
+        letter-spacing: 6px;
+        margin-bottom: 40px;
+    }
+
+    .Type-large {
+        font-size: 40px;
+        letter-spacing: 6px;
+    }
+
+}
+
+@media @BreakpointXnarrow {
+    .Type-xxLarge {
+        .Type-h3;
+    }
+
+    .Type-xLarge {
+        .Type-h4;
+    }
+
+    .Type-large {
+        .Type-h5;
+        font-weight: 800;
+    }
+}
